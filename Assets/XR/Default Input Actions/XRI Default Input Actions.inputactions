@@ -919,6 +919,33 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "LeftHand",
+            "id": "1e4156a5-54a0-458c-bc0a-bde5b54a6894",
+            "actions": [
+                {
+                    "name": "A",
+                    "type": "Button",
+                    "id": "4420b1d2-3bd9-4a38-a110-d94debc580b5",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "5fd16bba-4119-4cae-87d2-b7a7ce18c204",
+                    "path": "<XRController>{LeftHand}/primary",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "A",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
