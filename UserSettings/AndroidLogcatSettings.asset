@@ -1,9 +1,9 @@
 {
     "m_SelectedDeviceId": "1WMHH8354Z1174",
     "m_SelectedPackage": {
-        "deviceId": "1WMHH8354Z1174",
-        "name": "com.DefaultCompany.UnityVRRhythm",
-        "processId": 13284,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
@@ -12,13 +12,13 @@
             "deviceId": "1WMHH8354Z1174",
             "name": "com.oculus.os.vrusb",
             "processId": 5253,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "1WMHH8354Z1174",
             "name": "com.oculus.shellenv",
             "processId": 1824,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "1WMHH8354Z1174",
@@ -30,12 +30,18 @@
             "deviceId": "1WMHH8354Z1174",
             "name": "com.DefaultCompany.UnityVRRhythm",
             "processId": 12971,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "1WMHH8354Z1174",
             "name": "com.DefaultCompany.UnityVRRhythm",
             "processId": 13284,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH8354Z1174",
+            "name": "com.oculus.shellenv",
+            "processId": 1806,
             "exited": false
         }
     ],

@@ -14,6 +14,8 @@ public class AudioSourceDisplay : MonoBehaviour
     [SerializeField] private int _sampleCount = 512;
     [SerializeField] private int _chCount = 2;
     [SerializeField] private int _spectrumCount = 8;
+    public int SpectrumCount { get => _spectrumCount; }
+
     [SerializeField] private FFTWindow _windowType = FFTWindow.Blackman;
 
     private AudioSource _audioSource;
@@ -27,7 +29,7 @@ public class AudioSourceDisplay : MonoBehaviour
 
     public event UnityAction OnUpdated;
 
-    public float[] this[int ch] { get => _normalizedSpectrums[ch]; }
+    public float[] this[int ch] { get => _spectrums[ch]; }
     
     private void Awake()
     {
@@ -60,7 +62,6 @@ public class AudioSourceDisplay : MonoBehaviour
     {
         UpdateSpectrumData();
         UpdateSpectrums();
-        NormalizeSpectrums();
 
         OnUpdated?.Invoke();
     }
@@ -75,31 +76,26 @@ public class AudioSourceDisplay : MonoBehaviour
 
     private void UpdateSpectrums()
     {
-        // 512 => 2 4 8 16 32 64 128 256
-        // 1024 =>
-        // 스팩트럼이 늘어날때 맵핑은 어떻게?...
-        int count = 0;
-        for (int i = 0; i < _spectrumCount; ++i)
+        for (int ch = 0; ch < _chCount; ++ch)
         {
-            float avg = 0;
-            int sampleCount = (int)Mathf.Pow(2, i) * 2;
-
-            if (i == 7)
-                sampleCount += 2;
-
-            for (int j = 0; j < sampleCount; ++j)
+            int count = 0;
+            for (int i = 0; i < _spectrumCount; ++i)
             {
-                avg += _samples[0][count] * (count + 1);
-                ++count;
+                float avg = 0;
+                int sampleCount = (int)Mathf.Pow(2, i) * 2;
+
+                if (i == 7)
+                    sampleCount += 2;
+
+                for (int j = 0; j < sampleCount; ++j)
+                {
+                    avg += _samples[ch][count] * (count + 1);
+                    ++count;
+                }
+
+                avg /= count;
+                _spectrums[ch][i] = avg * 10f;
             }
-
-            avg /= count;
-            _spectrums[0][i] = avg * 10f;
         }
-    }
-
-    private void NormalizeSpectrums()
-    {
-
     }
 }

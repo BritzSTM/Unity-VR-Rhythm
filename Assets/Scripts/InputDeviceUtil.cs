@@ -72,14 +72,21 @@ public static class InputDeviceUtil
             return null;
         }
 
-        var device = InputSystem.GetDevice<T>(usage);
+        var device = InputSystem.GetDevice<T>();
         if (device == null)
         {
             Debug.LogWarning($"[{nameof(InputDeviceUtil)}] Failed GetDevice for {typeof(T)} : {usage}");
             return null;
         }
 
-        IInputDeviceRumble deviceRumble = new _internal.XRCommonRumble(device);
+        IInputDeviceRumble deviceRumble;
+        if (usage == CommonUsages.LeftHand)
+            deviceRumble = new _internal.XRCommonRumble(XRController.leftHand);
+        else if (usage == CommonUsages.RightHand)
+            deviceRumble = new _internal.XRCommonRumble(XRController.rightHand);
+        else
+            deviceRumble = null;
+
         return deviceRumble;
     }
 }
