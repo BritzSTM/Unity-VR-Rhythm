@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,12 +14,27 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text _MaxComboText;
     [SerializeField] private TMP_Text _ScoreText;
 
+    [SerializeField] private ReadyCount _readyCount;
+    [SerializeField] private AudioSource _audioPlayer;
+    [SerializeField] private Spawner _spawner;
+
+    private bool _isPlaying;
     private void Awake()
     {
         if (Inst == null)
             Inst = this;
         else
             Destroy(this);
+    }
+
+    private void OnEnable()
+    {
+        _readyCount.OnStart += OnStart;
+    }
+
+    private void OnDisable()
+    {
+        _readyCount.OnStart -= OnStart;
     }
 
     public void AddCool()
@@ -58,5 +71,27 @@ public class GameManager : MonoBehaviour
     {
         _MaxComboText.text = "MAX COMBO : " + MaxComboCount.ToString("D4");
         _ScoreText.text = "SCORE : " + TotalScore.ToString("D8");
+    }
+
+    private void OnStart()
+    {
+        _audioPlayer.Play();
+        _isPlaying = true;
+    }
+
+    private void Update()
+    {
+        if (!_isPlaying)
+            return;
+
+        if (_audioPlayer.isPlaying)
+        {
+            // 4초 먼저 스폰을 종료하기 위함
+            if(!(_audioPlayer.clip.length - 4.0f < _audioPlayer.time))
+                return;
+        }
+
+        _isPlaying = false;
+        _spawner.enabled = false;
     }
 }

@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5d1ee4abc53e9e488ac1e3c1982c3de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 5
+  Speed: 15
   _comboPrefab: {fileID: 2417806085676372237, guid: 76a7b3ac6d4a84b7b9cac57dde38ac56, type: 3}
   _comboTextForce: 400
   _coolRumbleDT: 0.4

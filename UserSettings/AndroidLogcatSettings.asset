@@ -10,12 +10,6 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "1WMHH8354Z1174",
-            "name": "com.oculus.os.vrusb",
-            "processId": 5253,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHH8354Z1174",
             "name": "com.oculus.shellenv",
             "processId": 1824,
             "exited": true
@@ -42,6 +36,12 @@
             "deviceId": "1WMHH8354Z1174",
             "name": "com.oculus.shellenv",
             "processId": 1806,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH8354Z1174",
+            "name": "com.oculus.os.vrusb",
+            "processId": 3309,
             "exited": false
         }
     ],

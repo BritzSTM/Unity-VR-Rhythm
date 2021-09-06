@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ReadyCount : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class ReadyCount : MonoBehaviour
 
     [SerializeField] private AudioSource _soundFXPlayer;
     [SerializeField] private AudioClip[] _countDownSoundFXs;
+
+    public event UnityAction OnStart;
 
     private Animator _animator;
     private int _count = 4;
@@ -35,6 +38,8 @@ public class ReadyCount : MonoBehaviour
             _NPanel.SetActive(false);
             _text.text = "START";
             _soundFXPlayer.PlayOneShot(_countDownSoundFXs[_count]);
+
+            OnStart?.Invoke();
         }
         else
             gameObject.SetActive(false);
