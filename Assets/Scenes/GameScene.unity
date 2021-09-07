@@ -219,6 +219,7 @@ MonoBehaviour:
   _readyCount: {fileID: 246593962}
   _audioPlayer: {fileID: 1532769303}
   _spawner: {fileID: 175461072}
+  _autoTime: 5
 --- !u!4 &206206338
 Transform:
   m_ObjectHideFlags: 0

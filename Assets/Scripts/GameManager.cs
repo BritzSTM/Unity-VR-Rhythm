@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -17,6 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private ReadyCount _readyCount;
     [SerializeField] private AudioSource _audioPlayer;
     [SerializeField] private Spawner _spawner;
+
+    [SerializeField] private float _autoTime = 5.0f;
 
     private bool _isPlaying;
     private void Awake()
@@ -93,5 +98,19 @@ public class GameManager : MonoBehaviour
 
         _isPlaying = false;
         _spawner.enabled = false;
+        StartCoroutine(RestartAuto());
+    }
+
+    private IEnumerator RestartAuto()
+    {
+        yield return new WaitForSeconds(_autoTime);
+
+        ComboCount = 0;
+        MaxComboCount = 0;
+        TotalScore = 0;
+        UpdateScoreTexts();
+
+        _spawner.enabled = true;
+        _readyCount.gameObject.SetActive(true);
     }
 }

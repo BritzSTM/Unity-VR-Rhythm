@@ -14,11 +14,17 @@ public class ReadyCount : MonoBehaviour
     public event UnityAction OnStart;
 
     private Animator _animator;
-    private int _count = 4;
+    private int _count;
 
     private void Awake()
     {
         _animator = GetComponent<Animator>();
+    }
+
+    private void OnEnable()
+    {
+        _count = 4;
+        _text.text = "READY";
     }
 
     private void OnRotationFinish()
