@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74d892dd38575a4daa14a0c6033ecec, type: 3}
+  m_Name: StartedSceneEventSO
+  m_EditorClassIdentifier: 
+  HelpComment: "SYS\uC5D0 \uD3EC\uD568\uB41C \uCD08\uAE30\uD654 \uCD94\uC801\uAE30\uAC00
+    start \uD568\uC218\uB97C \uD638\uCD9C\uD560 \uC2DC\uC810\uC758 \uC774\uBCA4\uD2B8"
