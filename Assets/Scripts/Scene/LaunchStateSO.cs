@@ -6,4 +6,6 @@ public class LaunchStateSO : ScriptableObject
 {
     [NonSerialized] public bool IsLaunched;
     [NonSerialized] public bool IsColdLaunched;
+
+    public void Launch() => IsLaunched = true;
 }

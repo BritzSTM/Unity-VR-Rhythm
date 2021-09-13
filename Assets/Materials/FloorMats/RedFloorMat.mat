@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: FloorMat
+  m_Name: RedFloorMat
   m_Shader: {fileID: -6465566751694194690, guid: c2df5ee5b09774e6abdb52a3af29cc88, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -45,7 +45,7 @@ Material:
     - _EmissionFresenPow: 1
     m_Colors:
     - BaseColor: {r: 0, g: 0.9301295, b: 1, a: 0}
-    - _BaseColor: {r: 0.3537736, g: 0.9543841, b: 1, a: 0}
-    - _Emission: {r: 0.10874673, g: 8.873497, b: 2.967628, a: 0}
-    - _EmissionEdge: {r: 0, g: 1.5094358, b: 5.283019, a: 0}
+    - _BaseColor: {r: 1, g: 0.5372043, b: 0.35294116, a: 0}
+    - _Emission: {r: 8.873496, g: 0.566277, b: 0.13937403, a: 0}
+    - _EmissionEdge: {r: 5.2830195, g: 0, b: 0.045188334, a: 0}
   m_BuildTextureStacks: []

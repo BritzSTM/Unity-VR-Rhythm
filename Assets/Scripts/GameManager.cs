@@ -1,15 +1,21 @@
-using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    private const string _soundTrackPlayerName = "SoundTrackPlayer";
+
     public static GameManager Inst { get; private set; }
     public int ComboCount { get; private set; }
     public int MaxComboCount { get; private set; }
     public int TotalScore { get; private set; }
+
+    [SerializeField] private TrackDescSO _selectedTrackSO;
+    [SerializeField] private VoidEventSO _requireGameEndEventSO;
 
     [SerializeField] private int CoolScore = 100;
     [SerializeField] private int GoodScore = 50;
@@ -18,7 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text _ScoreText;
 
     [SerializeField] private ReadyCount _readyCount;
-    [SerializeField] private AudioSource _audioPlayer;
+    private AudioSource _audioPlayer;
     [SerializeField] private Spawner _spawner;
 
     [SerializeField] private float _autoTime = 5.0f;
@@ -27,7 +33,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         if (Inst == null)
+        {
             Inst = this;
+            InitAudioSource();
+        }
         else
             Destroy(this);
     }
@@ -40,6 +49,7 @@ public class GameManager : MonoBehaviour
     private void OnDisable()
     {
         _readyCount.OnStart -= OnStart;
+        Inst = null;
     }
 
     public void AddCool()
@@ -80,8 +90,11 @@ public class GameManager : MonoBehaviour
 
     private void OnStart()
     {
+        _audioPlayer.clip = _selectedTrackSO.Track.Audio;
         _audioPlayer.Play();
+
         _isPlaying = true;
+        _spawner.BeatsPerMinute = _selectedTrackSO.Track.BeatsPerMinute;
     }
 
     private void Update()
@@ -98,7 +111,8 @@ public class GameManager : MonoBehaviour
 
         _isPlaying = false;
         _spawner.enabled = false;
-        StartCoroutine(RestartAuto());
+        _requireGameEndEventSO.RaiseEvent();
+        //StartCoroutine(RestartAuto());
     }
 
     private IEnumerator RestartAuto()
@@ -112,5 +126,26 @@ public class GameManager : MonoBehaviour
 
         _spawner.enabled = true;
         _readyCount.gameObject.SetActive(true);
+    }
+
+    private void InitAudioSource()
+    {
+        Scene s = SceneManager.GetSceneByName("Core");
+        if (!s.isLoaded)
+            return;
+
+        var obj = s.GetRootGameObjects().First(x => x.name == _soundTrackPlayerName);
+
+        if (obj != null)
+        {
+            _audioPlayer = obj.GetComponent<AudioSource>();
+        }
+    }
+
+    public void Stop()
+    {
+        _isPlaying = false;
+        _audioPlayer.Stop();
+        _requireGameEndEventSO.RaiseEvent();
     }
 }

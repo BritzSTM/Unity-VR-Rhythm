@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1369bdbf469f68b49a9f38c3cc9b4489, type: 3}
   m_Name: ElectronicBlueRoomEnvSO
   m_EditorClassIdentifier: 
+  _isAssignable: 0
   Comment: "\uC77C\uB809\uD2B8\uB85C\uB2C9 \uC74C\uC545\uC5D0 \uC5B4\uC6B8\uB9AC\uB294
     \uBE14\uB8E8 \uACC4\uC5F4 \uC124\uC815"
   Desc:
-    FloorCapMat: {fileID: 0}
+    FloorCapMat: {fileID: 2100000, guid: 89ee8a6f121b64a66bfa834ee03c1c40, type: 2}
+    DomeMat: {fileID: 2100000, guid: 6113042d97d32734eaee747c21b63837, type: 2}
     RoomVideoClip: {fileID: 32900000, guid: 2f35e064727c50e43b4f21056a141a37, type: 3}

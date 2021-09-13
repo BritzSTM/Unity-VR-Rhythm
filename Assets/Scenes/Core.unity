@@ -271,6 +271,66 @@ PrefabInstance:
       propertyPath: _sceneStack.Array.data[0].LoadMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: 6f0f4993cf38ae1428a05c1d6b9f24a9, type: 2}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: a93afb6dfe5f35841b2b4d333c9655d7, type: 2}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AssignFrom
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Launch
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoomEnvDescSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: LaunchStateSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 11400000, guid: 16f3c7cf9e2c0de45b9b78cabe16d68d, type: 2}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: RoomEnvDescSO, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1881522277695857606, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
+      propertyPath: _beginEvent.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9821caad9e3ed4391808adcbdb62f548, type: 3}
 --- !u!1001 &1436530136

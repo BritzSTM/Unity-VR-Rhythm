@@ -43,8 +43,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d32c550ff551947918e1f4cf410ba121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _launchStateSO: {fileID: 11400000, guid: a93afb6dfe5f35841b2b4d333c9655d7, type: 2}
   _onStartSceneSO: {fileID: 11400000, guid: 8b185dbb2586ed142b282087e19621aa, type: 2}
   _autoLoadWhenStartScene: 0
   _unloadCurrentScene: 1
   _sceneStack: []
+  _beginEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  _endEvent:
+    m_PersistentCalls:
+      m_Calls: []
   _onEventSO: {fileID: 0}

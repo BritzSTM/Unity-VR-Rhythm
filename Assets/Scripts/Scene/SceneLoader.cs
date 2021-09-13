@@ -1,17 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] protected LaunchStateSO _launchStateSO;
     [SerializeField] private SceneLoadEventSO _onStartSceneSO;
 
     [Tooltip("load from scene stack")]
     [SerializeField] private bool _autoLoadWhenStartScene = false;
+    [SerializeField] private bool _autoLoadIgnoreWhenColdStart = true;
     [SerializeField] private bool _unloadCurrentScene = true;
     [SerializeField] private List<SceneLoadType> _sceneStack;
     public List<SceneLoadType> SceneStack { get => _sceneStack; }
+
+    [Header("raise event")]
+    [SerializeField] private UnityEvent _beginEvent;
+    [SerializeField] private UnityEvent _endEvent;
 
     private bool _onStartScene;
     protected virtual void OnEnable()
@@ -72,6 +79,9 @@ public class SceneLoader : MonoBehaviour
         yield return null;
         SceneManager.sceneLoaded += OnSceneLoaded;
 
+        if (_beginEvent != null)
+            _beginEvent.Invoke();
+
         foreach (var s in sceneStack)
         {
             LoadSceneFrom(s);
@@ -79,6 +89,10 @@ public class SceneLoader : MonoBehaviour
         }
 
         SceneManager.sceneLoaded -= OnSceneLoaded;
+
+        if (_endEvent != null)
+            _endEvent.Invoke();
+
         Destroy(gameObject);
     }
 
@@ -95,5 +109,11 @@ public class SceneLoader : MonoBehaviour
     }
 
     private void OnStartScene(Scene s) =>_onStartScene = true;
-    private void OnAutoLoadWhenStartScene(Scene s) => LoadFromSceneStack();
+    private void OnAutoLoadWhenStartScene(Scene s)
+    {
+        if (_autoLoadIgnoreWhenColdStart && _launchStateSO.IsColdLaunched)
+            return;
+
+        LoadFromSceneStack();
+    }
 }

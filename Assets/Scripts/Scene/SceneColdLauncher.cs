@@ -6,15 +6,13 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class SceneColdLauncher : SceneLoader
 {
-    [SerializeField] private LaunchStateSO _launchStateSO;
-
     private Scene _awakeScene;
     private SceneLoadType _awakeSceneType;
     private void Awake()
     {
         Debug.Assert(_launchStateSO != null);
 
-        if (!_launchStateSO.IsColdLaunched)
+        if (!_launchStateSO.IsLaunched)
             SaveAwakeSceneTypeAndSceneStack();
         else
             Destroy(gameObject);
@@ -24,7 +22,7 @@ public class SceneColdLauncher : SceneLoader
     {
         base.OnEnable();
 
-        if (_launchStateSO.IsColdLaunched)
+        if (_launchStateSO.IsLaunched)
             return;
 
         _launchStateSO.IsLaunched = true;

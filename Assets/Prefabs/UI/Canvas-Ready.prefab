@@ -288,6 +288,8 @@ MonoBehaviour:
   _text: {fileID: 3486035747061351991}
   _APanel: {fileID: 2927641735112385177}
   _NPanel: {fileID: 1967363078002446200}
+  _playSoundFXSO: {fileID: 11400000, guid: 81f7ab02086144744996b5e731996755, type: 2}
+  _countDownSoundFXs: []
 --- !u!1 &3486035747061351989
 GameObject:
   m_ObjectHideFlags: 0
@@ -355,8 +357,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: READY
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: b0b2a5eeab5e16d46930bf2f14e5b306, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: b0b2a5eeab5e16d46930bf2f14e5b306, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
