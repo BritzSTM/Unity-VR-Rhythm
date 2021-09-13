@@ -921,27 +921,145 @@
             ]
         },
         {
-            "name": "LeftHand",
-            "id": "1e4156a5-54a0-458c-bc0a-bde5b54a6894",
+            "name": "AnyKey",
+            "id": "b3badff0-c2b3-4f0c-bd96-5a3148499976",
             "actions": [
                 {
-                    "name": "A",
+                    "name": "LeftAnyKey",
                     "type": "Button",
-                    "id": "4420b1d2-3bd9-4a38-a110-d94debc580b5",
+                    "id": "9cca52cc-bf6c-401c-8bd0-450393906525",
                     "expectedControlType": "Button",
                     "processors": "",
-                    "interactions": ""
+                    "interactions": "Press(behavior=2)"
+                },
+                {
+                    "name": "RightAnyKey",
+                    "type": "Button",
+                    "id": "8094e767-fdd8-4630-b9c7-958e2a3db775",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "Press"
                 }
             ],
             "bindings": [
                 {
                     "name": "",
-                    "id": "5fd16bba-4119-4cae-87d2-b7a7ce18c204",
-                    "path": "<XRController>{LeftHand}/primary",
+                    "id": "fd769add-85aa-46ff-ad8a-0f5a2055f134",
+                    "path": "<XRController>{LeftHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "A",
+                    "action": "LeftAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c278341-b308-411d-ab78-0524ae77d873",
+                    "path": "<XRController>{LeftHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4ffff4f6-c87d-4c78-9f86-0f4e369e5e09",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5e17bf83-a1f0-40e6-a9a4-c29798444537",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ea704a0e-7c7f-4d67-a826-639463f937b9",
+                    "path": "<XRController>{LeftHand}/joystickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "52f0ac98-6546-47b0-a403-0aa6bcca1a19",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba3f6a45-3c12-438e-8647-98449bff9616",
+                    "path": "<XRController>{RightHand}/primaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2b1ed488-6ab3-43f5-9fe0-d6d22d1a316e",
+                    "path": "<XRController>{RightHand}/secondaryButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4df1a088-89d2-4c5c-9807-723ca3a7d797",
+                    "path": "<XRController>{RightHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72859c7d-2da0-4c7d-af5b-5e15b0fb2e88",
+                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c191aa55-8638-4341-a6fc-aba1745a9d40",
+                    "path": "<XRController>{RightHand}/joystickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightAnyKey",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1369bdbf469f68b49a9f38c3cc9b4489, type: 3}
+  m_Name: SelectRoomEnvSO
+  m_EditorClassIdentifier: 
+  Comment: "\uC74C\uC545 \uC120\uD0DD\uC744 \uC704\uD55C \uBD84\uC704\uAE30"
+  Desc:
+    FloorCapMat: {fileID: 2100000, guid: fc7509adc0224ee468fc77c948cdf6f5, type: 2}
+    DomeMat: {fileID: 2100000, guid: 2d009e2a3547e4d42930024eaf1fae41, type: 2}
+    RoomVideoClip: {fileID: 32900000, guid: 9c6d90f0d9b5069479d88cf1d075abb2, type: 3}

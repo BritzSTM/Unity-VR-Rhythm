@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,9 +5,6 @@ using UnityEngine.Events;
 public class AudioSourceDisplay : MonoBehaviour
 {
     public const float AudibleFrequency = 22050;
-
-    // 구간 [ [i - 1] , [i] ), i == 0 => [i - 1] = 0 
-    public static readonly float[] FrequencyIntervals = { 20, 60, 250, 500, 2000, 4000, 6000, 22050 }; 
 
     [SerializeField] private int _sampleCount = 512;
     [SerializeField] private int _chCount = 2;
@@ -76,6 +71,8 @@ public class AudioSourceDisplay : MonoBehaviour
 
     private void UpdateSpectrums()
     {
+        // 생각보다 좋은 느낌으로 안나와서 유튜브를 찾아보니
+        // 사람이 구분할 수 있는 음역별로 구별해서 출력해야 함. 해당 코드를 참고하여 작성
         for (int ch = 0; ch < _chCount; ++ch)
         {
             int count = 0;
