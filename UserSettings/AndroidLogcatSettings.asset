@@ -10,12 +10,6 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "1WMHH8354Z1174",
-            "name": "com.oculus.shellenv",
-            "processId": 1824,
-            "exited": true
-        },
-        {
-            "deviceId": "1WMHH8354Z1174",
             "name": "com.DefaultCompany.UnityVRRhythm",
             "processId": 7223,
             "exited": true
@@ -42,6 +36,12 @@
             "deviceId": "1WMHH8354Z1174",
             "name": "com.oculus.os.vrusb",
             "processId": 3309,
+            "exited": true
+        },
+        {
+            "deviceId": "1WMHH8354Z1174",
+            "name": "com.DefaultCompany.UnityVRRhythm",
+            "processId": 12774,
             "exited": false
         }
     ],
@@ -95,7 +95,7 @@
         "MemoryGroup": 2,
         "Behavior": 0
     },
-    "m_Filter": "",
+    "m_Filter": "HOHO",
     "m_FilterIsRegularExpression": false,
     "m_SymbolPaths": []
 }

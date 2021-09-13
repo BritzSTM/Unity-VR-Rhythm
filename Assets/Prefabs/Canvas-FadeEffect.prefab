@@ -105,7 +105,7 @@ RectTransform:
   m_GameObject: {fileID: 5045028106953898640}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5045028105750927125}
   m_Father: {fileID: 0}
@@ -125,7 +125,7 @@ Canvas:
   m_GameObject: {fileID: 5045028106953898640}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 2
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &5045028106953898642
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,3 +210,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _onEndFadeInEventSO: {fileID: 11400000, guid: 19688253da8d08943a6fc8a3f5073f19, type: 2}
   _onEndFadeOutEventSO: {fileID: 11400000, guid: e812d07a4fb3b4f40b82771b65bc092e, type: 2}
+  _requirePlaySoundFXSO: {fileID: 11400000, guid: 81f7ab02086144744996b5e731996755, type: 2}
+  _inSoundFX: {fileID: 8300000, guid: 7f0bd55fffaaa5c4ba93f834fedf9e54, type: 3}

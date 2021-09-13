@@ -17,5 +17,6 @@ public class TrackDescSO : ScriptableObject
 {
     [TextArea(2, 5)]
     public string Comment;
-    public TrackData track;
+    public TrackData Track;
+    public RoomEnvDescSO RoomDescSO; 
 }

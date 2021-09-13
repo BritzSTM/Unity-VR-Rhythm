@@ -5,6 +5,10 @@ public class FadeEffect : MonoBehaviour
     [Header("Raise")]
     [SerializeField] private VoidEventSO _onEndFadeInEventSO;
     [SerializeField] private VoidEventSO _onEndFadeOutEventSO;
+    [SerializeField] private AudioClipEventSO _requirePlaySoundFXSO;
+
+    [Header("FXs")]
+    [SerializeField] private AudioClip _inSoundFX;
 
     private Animator _animator;
 
@@ -16,6 +20,7 @@ public class FadeEffect : MonoBehaviour
     public void StartFadeIn()
     {
         _animator.SetTrigger("FadeIn");
+        _requirePlaySoundFXSO?.RaiseEvent(_inSoundFX);
     }
 
     public void StartFadeOut()

@@ -999,6 +999,17 @@
                 },
                 {
                     "name": "",
+                    "id": "52f0ac98-6546-47b0-a403-0aa6bcca1a19",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "LeftAnyKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ba3f6a45-3c12-438e-8647-98449bff9616",
                     "path": "<XRController>{RightHand}/primaryButton",
                     "interactions": "",
